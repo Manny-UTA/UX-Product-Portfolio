@@ -1,10 +1,13 @@
 'use client';
-
 import "./globals.css";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
+import GlassSkillCard from "@/components/GlassSkillCard";
+import SkillsSection from "@/components/SkillsSection";
+import StackingSkills from "@/components/StackingSkills";
+import FaqSection from "@/components/FaqSection";
+import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -16,35 +19,50 @@ export default function Home() {
             className="headline"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            Turning complex UX problems into intuitive product experiences.
+            Hey, I'm Manny ! UX/Product Designer & Engineer
           </motion.h1>
 
           <motion.p
             className="subtext"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I’m a product-minded UX designer and engineer who designs with purpose —
-            backed by research, driven by systems thinking, and built for scale.
+            Turning complex problems into intuitive, impactful experiences — backed by research, driven by systems thinking.
           </motion.p>
 
+          <div className="toolstack">
+          <span>Figma</span>
+          <span>Framer</span>
+          <span>HTML</span>
+          <span>React</span>
+          <span>Notion</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Next.JS</span>
+          <span>React.JS</span>
+          <span>TypeScript</span>
+          <span>Python</span>
+         </div>
+
           <motion.a
+            href="#projects"
             className="cta-button"
-            href="/work"
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             See My Work
           </motion.a>
+
+          <div className="scroll-cue">↓  Scroll to explore featured projects</div>
         </div>
       </section>
 
       {/* Selected Projects */}
-      <section className="full-width" style={{ background: "#0A0A0A", padding: "4rem 0" }}>
+      <section id="projects" className="full-width project-section">
         <Reveal delay={0}>
           <FeaturedProjectCard
             title="SubTracker"
@@ -56,55 +74,26 @@ export default function Home() {
 
         <Reveal delay={0.2}>
           <FeaturedProjectCard
-            title="GymBuddy"
-            description="Your personalized fitness companion powered by social accountability."
-            href="/work/gymbuddy"
+            title="SubTracker"
+            description="A simple app to manage and track your subscriptions. Set alerts, get insights, and stay in control."
+            href="/work/subtracker"
             imgSrc="/projectdemo2.jpg"
           />
         </Reveal>
 
         <Reveal delay={0.4}>
           <FeaturedProjectCard
-            title="ColorStack UTA"
-            description="Chapter site that converts interest to community and programs."
-            href="/work/colorstack"
+            title="SubTracker"
+            description="A simple app to manage and track your subscriptions. Set alerts, get insights, and stay in control."
+            href="/work/subtracker"
             imgSrc="/projectdemo3.jpg"
           />
         </Reveal>
       </section>
 
-      {/* UX Metrics Block */}
-      <section className="ux-metrics full-width">
-        <h2 className="tan-headline">Design Impact</h2>
-        <div className="metrics-grid">
-          <div className="metric">
-            <h3>+60%</h3>
-            <p>Faster student lookup time<br />via MavBuddy AI Tool</p>
-          </div>
-          <div className="metric">
-            <h3>+40%</h3>
-            <p>User engagement increase<br />with GymBuddy redesign</p>
-          </div>
-          <div className="metric">
-            <h3>+3000</h3>
-            <p>New signups driven by<br />DoorDash campaign strategy</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Playground Section */}
-      <section className="astro-playground">
-        <h2 className="tan-headline">Playground</h2>
-        <p>Astrology-inspired design experiments. ✦ Building tools that feel like instinct.</p>
-        <a className="cta-button gold small" href="/playground">Explore Concepts</a>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact-section">
-        <h2 className="tan-headline">Let’s Collaborate</h2>
-        <p>Have a project or team that needs a sharp mind with soul? Let’s talk.</p>
-        <a className="cta-button gold" href="/contact">Contact Me</a>
-      </section>
+      <StackingSkills />
+      <FaqSection />
+      <ContactSection />
     </main>
   );
 }
