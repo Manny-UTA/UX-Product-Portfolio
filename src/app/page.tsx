@@ -1,65 +1,74 @@
 'use client';
+
 import "./globals.css";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
 import GlassSkillCard from "@/components/GlassSkillCard";
 import SkillsSection from "@/components/SkillsSection";
 import StackingSkills from "@/components/StackingSkills";
+import Typewriter from 'typewriter-effect';
 import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
 import { motion } from "framer-motion";
 
-export default function Home() {
+const tools = [
+  'figma',
+  'framer',
+  'slack',
+  'react',
+  'ts',
+  'js',
+];
+
+export default function HeroSection() {
   return (
-    <main className="home">
-      {/* Hero Section */}
-      <section className="hero full-width">
-        <div className="hero-inner">
-          <motion.h1
-            className="headline"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Hey, I'm Manny ! UX/Product Designer & Engineer
-          </motion.h1>
+    <main>
+      <section className="hero-section">
+        <div className="hero-background" />
 
-          <motion.p
-            className="subtext"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Turning complex problems into intuitive, impactful experiences — backed by research, driven by systems thinking.
-          </motion.p>
+        <div className="hero-content">
+          <div className="hero-content-wrapper">
+            <div className="hero-left">
+              <h1 className="hero-title">
+                Hey, I'm Manny — <br /> UX Engineer & Systems Thinker
+              </h1>
 
-          <div className="toolstack">
-          <span>Figma</span>
-          <span>Framer</span>
-          <span>HTML</span>
-          <span>React</span>
-          <span>Notion</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Next.JS</span>
-          <span>React.JS</span>
-          <span>TypeScript</span>
-          <span>Python</span>
-         </div>
+              <div className="typewriter-subtitle">
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Designing clean, scalable systems.',
+                      'Bridging design and engineering.',
+                      'Turning Figma files into frontend gold.',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 40,
+                    deleteSpeed: 20,
+                  }}
+                />
+              </div>
 
-          <motion.a
-            href="#projects"
-            className="cta-button"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            See My Work
-          </motion.a>
+              <p className="hero-description">
+                Based in Texas. Often seen rating matcha spots ✦ organizing ColorStack events ✦ drafting 5+ Substack pieces I’m proudly gatekeeping.{' '}
+                <em>(shhh 🤫)</em>
+              </p>
+            </div>
 
-          <div className="scroll-cue">↓  Scroll to explore featured projects</div>
+            <div className="hero-right">
+  <div className="rotating-stamp-wrapper">
+    <img src="/manny-rotation.png" alt="Name Ring" className="name-ring rotating" />
+    <img src="/manny-icon.png" alt="Manny Icon" className="center-icon" />
+  </div>
+</div>
+            
+          </div>
+          <div className="scroll-cue">
+  <span>↓ Scroll</span>
+</div>
         </div>
-      </section>
+</section>
+
 
       {/* Selected Projects */}
       <section id="projects" className="full-width project-section">
