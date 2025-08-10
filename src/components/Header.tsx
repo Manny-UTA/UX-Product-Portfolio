@@ -1,4 +1,22 @@
 // components/Header.tsx
+'use client';
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+  return (
+    <li>
+      <Link href={href} className={isActive ? "active" : undefined}>
+        {children}
+      </Link>
+    </li>
+  );
+}
+
 export default function Header() {
   return (
     <header className="glass-nav">
@@ -10,9 +28,9 @@ export default function Header() {
         </div>
       </div>
       <ul className="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/work">Portfolio</a></li>
-        <li><a href="/about">About</a></li>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/work">Portfolio</NavLink>
+        <NavLink href="/about">About</NavLink>
       </ul>
     </header>
   );
