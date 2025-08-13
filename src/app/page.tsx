@@ -3,7 +3,6 @@
 import "./globals.css";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
 import GlassSkillCard from "@/components/GlassSkillCard";
-import SkillsSection from "@/components/SkillsSection";
 import Typewriter from 'typewriter-effect';
 import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
@@ -31,7 +30,7 @@ export default function HeroSection() {
           <div className="hero-content-wrapper">
             <div className="hero-left">
               <h1 className="hero-title">
-                Hey, I'm Manny — <br /> UX Engineer & Systems Thinker
+                Hey, I&apos;m Manny — <br /> UX Engineer & Systems Thinker
               </h1>
 
               <div className="typewriter-subtitle">
