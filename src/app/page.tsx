@@ -4,7 +4,6 @@ import "./globals.css";
 import FeaturedProjectCard from "@/components/FeaturedProjectCard";
 import GlassSkillCard from "@/components/GlassSkillCard";
 import SkillsSection from "@/components/SkillsSection";
-import SkillsStepper from '@/components/SkillsStepper';
 import Typewriter from 'typewriter-effect';
 import ContactSection from "@/components/ContactSection";
 import Reveal from "@/components/Reveal";
@@ -52,7 +51,7 @@ export default function HeroSection() {
               </div>
 
               <p className="hero-description">
-                Based in Texas. Often seen rating matcha spots ✦ organizing ColorStack events ✦ drafting 5+ Substack pieces I’m proudly gatekeeping.{' '}
+                Based in Texas. Often seen rating matcha spots ✦ drafting 5+ Substack pieces I’m proudly gatekeeping.{' '}
                 <em>(shhh 🤫)</em>
               </p>
             </div>
@@ -73,8 +72,6 @@ export default function HeroSection() {
 
       {/* Selected Projects */}
 <ProjectShowcase></ProjectShowcase>
-
-      <SkillsStepper />
       <ContactSection />
       <Footer />
     </main>

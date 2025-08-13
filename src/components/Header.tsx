@@ -21,15 +21,15 @@ export default function Header() {
   return (
     <header className="glass-nav">
       <div className="profile">
-        <img src="/avatar.jpg" alt="Manny Arellano Jr" className="avatar" />
+        <img src="/aboutme.jpeg" alt="Manny Arellano Jr" className="avatar" />
         <div className="name-role">
           <span className="name">Manny Arellano Jr</span>
           <span className="role">Designer & Engineer</span>
         </div>
       </div>
       <ul className="nav-links">
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/work">Portfolio</NavLink>
+        <NavLink href="/">Work</NavLink>
+        <NavLink href="/play">Play</NavLink>
         <NavLink href="/about">About</NavLink>
       </ul>
     </header>

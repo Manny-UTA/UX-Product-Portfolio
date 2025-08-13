@@ -22,7 +22,7 @@ export default function Footer() {
           <span className="footer-heading">Let’s Connect!</span>
           <div className="footer-icons">
             <a href="/portfolio" aria-label="Work">💼</a>
-            <a href="mailto:hello@example.com" aria-label="Email">📧</a>
+            <a href="mailto:mannyarellanojr17@gmail.com" aria-label="Email">📧</a>
             <a href="https://cal.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Book time">🐙</a>
           </div>
         </div>
